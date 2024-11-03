@@ -245,7 +245,9 @@ var insert = function({ comment, scrollIntoView, offset }) {
         var votes = function (value) {
             var span = $("span.isso-votes", footer);
             if (span === null) {
-                footer.prepend($.new("span.isso-votes", value));
+                var votes = $.new("span.isso-votes", value);
+                votes.setAttribute("itemprop", "upvoteCount");
+                footer.prepend(votes);
             } else {
                 span.textContent = value;
             }
