@@ -106,7 +106,7 @@ function init() {
         }
 
         try {
-            $(window.location.hash + " > .isso-text-wrapper").classList.add("isso-target");
+            $(window.location.hash).classList.add("isso-target");
         } catch(ex) {
             // selector probably doesn't exist as element on page
         }
@@ -156,7 +156,7 @@ function fetchComments() {
                     // We can't just set the id to `#isso-target` because it's already set to `#isso-[number]`
                     // So a class `.isso-target` has to be used instead, and then we can manually remove the
                     // class from the old target comment in the `hashchange` listener.
-                    $(window.location.hash + " > .isso-text-wrapper").classList.add("isso-target");
+                    $(window.location.hash).classList.add("isso-target");
                 } catch(ex) {
                     // selector probably doesn't exist as element on page
                 }

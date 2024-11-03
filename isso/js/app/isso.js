@@ -216,9 +216,9 @@ var insert = function({ comment, scrollIntoView, offset }) {
         el.scrollIntoView();
     }
 
-    var footer = $("#isso-" + comment.id + " > .isso-text-wrapper > .isso-comment-footer"),
-        header = $("#isso-" + comment.id + " > .isso-text-wrapper > .isso-comment-header"),
-        text   = $("#isso-" + comment.id + " > .isso-text-wrapper > .isso-text");
+    var footer = $("#isso-" + comment.id + " > .isso-comment-footer"),
+        header = $("#isso-" + comment.id + " > .isso-comment-header"),
+        text   = $("#isso-" + comment.id + " > .isso-text");
 
     var form = null;  // XXX: probably a good place for a closure
     $("a.isso-reply", footer).toggle("click",

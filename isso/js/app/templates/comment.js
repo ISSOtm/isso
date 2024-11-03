@@ -14,7 +14,6 @@ var html = function (globals) {
 "<article class='isso-comment" + pageAuthorClass + "' id='isso-" + comment.id + "' data-hash='" + comment.hash + "' itemprop=comment itemscope itemtype='https://schema.org/Comment'>"
 + (conf.gravatar ? "<div class='isso-avatar'><img src='" + comment.gravatar_image + "'></div>" : '')
 + (conf.avatar ? "<div class='isso-avatar'><svg data-hash='" + comment.hash + "'></svg></div>" : '')
-+ "<div class='isso-text-wrapper'>"
   + "<header class='isso-comment-header'>"
     + (comment.website
         ? "<a class='isso-author' href='" + comment.website + "' rel='author nofollow'>" + author + "</a>"
@@ -44,7 +43,6 @@ var html = function (globals) {
      + "<a class='isso-edit' href='#'>" + i18n('comment-edit') + "</a>"
      + "<a class='isso-delete' href='#'>" + i18n('comment-delete') + "</a>"
   + "</footer>" // .isso-comment-footer
-+ "</div>" // .text-wrapper
 + "<div class='isso-follow-up'></div>"
 + "</article>" // .isso-comment
 };
